@@ -13,3 +13,5 @@ class Firewall:
                 return True
         except KeyError:
             return False
+
+        return False
