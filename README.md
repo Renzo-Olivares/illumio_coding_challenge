@@ -1,5 +1,7 @@
+# Illumio Coding Challenge
 ## Thought process
-* For my implementation I decided to use nested dictionaries.
+* For my implementation I decided to use nested dictionaries to store the firewall rules. I decided to do this because I realized that I did not need to create a new rule for every line because unlike the `port` and `ip_address` there was not much variation in `direction`, and `protocol`, so I made `inbound` and `outbound` the keys for the top level of my dictionary. Then inside those buckets I placed another dictionary with using the protocols `tcp` and `udp` as keys. Inside the protocol dictionary I would insert a new dictionary which would use `ports` as a key and a list of `ip_addresses` as the value. To figure out ranges for ports and ip_addresses I created helper functions that would return a list of ports or ip_addresses based on a start and end. 
+* Using nested dictionaries was extremely helpful in building `accept_packet`. I simply needed to access the correct port in the dictionary in `O(1)` time and then iterate through the list of `ip_addresses` at the given port in `O(ip_addresses)` time.  
 
 ## Classes
 `Firewall`
@@ -16,3 +18,8 @@
 
 ## Testing
 * I use python's built in unit test library in order to conduct my tests. You can find the unit tests in `fw_test.py` and you can run them with `unit_test`.py .
+
+## Team Rank
+    1. Platform Team
+    2. Data Team
+    3. Policy Team
