@@ -19,6 +19,9 @@
 ## Testing
 * I use python's built in unit test library in order to conduct my tests. You can find the unit tests in `fw_test.py` and you can run them with `unit_test`.py .
 
+## Optimization
+* If I had more time I would look into optimizing the final look up for `ip_address` in `accept_packet()`, and the protocol dictionary overall that maps a port to a list of `ip_addresses`
+
 ## Team Rank
     1. Platform Team
     2. Data Team
